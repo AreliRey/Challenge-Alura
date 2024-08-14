@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3e5f5;
+    color: #4a148c;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    justify-content: flex-start;
+    padding-top: 20px;
+}
+
+h1 {
+    color: #4a148c;
+    margin-bottom: 20px;
+}
+
+.container-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que los contenedores se envuelvan en dispositivos más pequeños */
+}
+
+.container {
+    text-align: center;
+    flex: 1 1 100%; /* Ocupa todo el ancho disponible */
+    max-width: 500px; /* Limita el ancho máximo para una mejor visualización */
+}
+
+textarea {
+    width: 100%; 
+    height: 50%;
+    border: 2px solid #4a148c;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+button {
+    background-color: #d1c4e9; 
+    color: #ffffff; 
+    font-weight: bold; 
+    font-size: 18px; 
+    border: 2px solid #4a148c; 
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%;
+    max-width: 150px;
+}
+
+button:hover {
+    background-color: #b39ddb;
+}
+
+button.active {
+    background-color: #4a148c; 
+    color: #ffffff; 
+}
+
+button.inactive {
+    background-color: #d1c4e9; 
+    color: #4a148c; 
+}
+
+.image-container {
+    width: 100%; /* Ocupa todo el ancho del contenedor en dispositivos móviles */
+    max-width: 500px; /* Limita el ancho máximo para una mejor visualización */
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    width: 100%; 
+    height: auto; /* Mantener la proporción de la imagen */
+    border-radius: 10px;
+}
+
+.caption {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 24px; /* Tamaño ajustado */
+    font-weight: bold; 
+    color: #4a148c; 
+    margin-top: 10px;
+}
+
+/* Media Queries para dispositivos móviles y tabletas */
+@media (max-width: 768px) {
+    .container-wrapper {
+        flex-direction: column; /* Los contenedores se apilan verticalmente en pantallas pequeñas */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+    
+    .container {
+        max-width: 100%; /* Ocupa todo el ancho en dispositivos móviles */
+    }
+
+    .image-container {
+        width: 100%; /* Ocupa todo el ancho en dispositivos móviles */
+    }
+}

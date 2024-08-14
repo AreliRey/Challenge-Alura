@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge encryptor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Encriptador</h1>
+    
+    <div class="container-wrapper">
+        <div class="container">
+            <textarea id="text_1" rows="4" cols="50" placeholder="Ingrese el texto ..." oninput="Validate_Text(this)"></textarea>
+            <br>
+            <button onclick="Read_Text(1)">Encriptar</button>
+            <button onclick="Read_Text(2)">Desencriptar</button>
+        </div>
+        <div class="container" id="text_2_container" style="display: none;">
+            <textarea id="text_2" rows="4" cols="50" placeholder="Ingrese el texto a copiar ..." oninput="Validate_Text(this)"></textarea>
+            <br>
+            <button onclick="Copy()">Copiar</button>
+        </div>
+        <div class="image-container" id="div_image">
+            <img src="img/img_gif.gif" alt="Descripción de la imagen">
+            <div class="caption">No se han detectado texto para copiar</div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
